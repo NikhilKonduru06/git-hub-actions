@@ -1,7 +1,16 @@
 name: CI/CD
 on:
   workflow_dispatch:
-
+    inputs:
+      environment:
+        description: this is environment where work flow runs
+        default: 'dev'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
 jobs:
   code:
     runs-on: ubuntu-latest
