@@ -1,7 +1,8 @@
-services:
+version: "3.8"
 
+services:
   web:
-    image: ${DOCKERHUB_USER}/nikhilkonduru06/github-actions-app
+    build: .
     ports:
-      -"80:80"
+      - "80:5000"
 
