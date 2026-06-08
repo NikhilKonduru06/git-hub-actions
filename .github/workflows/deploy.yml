@@ -17,5 +17,9 @@ jobs:
             - name: set up docker compose
               uses: docker/setup-compose-action@v2
 
+            - name: check files
+              run: |
+                pwd
+                ls -la
             - name: deploy docker compose
               run: docker compose up -d --build
